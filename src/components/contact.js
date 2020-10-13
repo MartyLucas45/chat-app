@@ -1,20 +1,17 @@
-import React from 'react';
-import './style.css';
+import React from "react";
+import "./Contact.css";
 
-const connect = true
-const point = document.querySelector(".status-online");
-
-function Contact() {
+function Contact(props) {
   return (
     <div className="Contact">
-        <div className="Nom">
-            <img className="avatar" href="https://randomuser.me/api/portraits/women/2.jpg" />
-            <h1 className="name">Willie Ellis</h1>
-        </div>
+      <img className="avatar" src={props.img} alt={props.imgAlt} />
+      <div>
+        <p className="name">{props.imgAlt}</p>
         <div className="status">
-            <div className="status-online"></div>
-            <p className="status-text"> {connect ? 'Online' : 'Offline'} </p>
+          <div className={props.statut} />
+          <p className="status-text">{props.statutText}</p>
         </div>
+      </div>
     </div>
   );
 }
