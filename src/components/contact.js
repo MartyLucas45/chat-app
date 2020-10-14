@@ -1,19 +1,20 @@
 import React from "react";
-import "./Contact.css";
 
-function Contact(props) {
-  return (
-    <div className="Contact">
-      <img className="avatar" src={props.img} alt={props.imgAlt} />
-      <div>
-        <p className="name">{props.imgAlt}</p>
-        <div className="status">
-          <div className={props.statut} />
-          <p className="status-text">{props.statutText}</p>
+class Contact extends React.Component {
+  render(){
+    return (
+      <div className="Contact">
+        <img className="avatar" src={this.props.img} alt={this.props.imgAlt} />
+        <div>
+          <p className="name">{this.props.imgAlt}</p>
+          <div className="status">
+            <div className={this.props.statut} />
+            <p className="status-text">{this.props.statutText}</p>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default Contact;
